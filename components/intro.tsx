@@ -5,6 +5,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaMedium, FaKaggle, FaRobot } from "react-icons/fa";
+import { HiDownload } from "react-icons/hi";
 import { useSectionInView } from "@/lib/hooks";
 import { useActiveSectionContext } from "@/context/active-section-context";
 import ParticleContainer from "./particle-container";
@@ -51,7 +52,7 @@ export default function Intro() {
     <section
       ref={ref}
       id="home"
-      className="mb-4 sm:mb-0 text-center scroll-mt-[100rem] particles-section pt-28 pb-14 sm:pt-36 sm:pb-18 w-full px-4"
+      className="mb-16 sm:mb-0 text-center scroll-mt-[100rem] particles-section pt-28 pb-14 sm:pt-36 sm:pb-18 w-full px-4"
       aria-label="Introduction"
     >
       <ParticleContainer />
@@ -97,20 +98,43 @@ export default function Intro() {
 
       {/* Main Heading */}
       <motion.h1
-        className="mb-12 mt-8 px-2 sm:px-4 text-xl sm:text-2xl font-medium !leading-[1.5] text-white max-w-3xl lg:max-w-4xl xl:max-w-5xl  mx-auto"
+        className="mb-12 mt-8 px-2 sm:px-4 text-xl sm:text-2xl font-medium !leading-[1.5] text-white max-w-[50rem] mx-auto"
         initial={{ opacity: 0, y: 80 }}
         animate={{ opacity: 1, y: 0, transition: { duration: 1.2 } }}
       >
         <span className="block mb-2 text-2xl sm:text-3xl font-bold">
-          Hello, I'm Md Sazzad Hossain
+          Hi, I'm Md Sazzad Hossain
         </span>
+
         <span className="block mb-2 text-lg sm:text-xl font-semibold text-white/90">
-          AI Engineer at JB Connect Ltd.
+          AI Engineer | LLMs • RAG Systems • Multi-Agent AI
         </span>
+
         <span className="block text-base sm:text-lg font-normal text-white/80">
-          Specializing in Large Language Models, Model Training, Fine-tuning, and Deployment
+          Building scalable, production-ready AI systems powered by NLP, Generative AI, and intelligent automation
         </span>
       </motion.h1>
+
+
+      {/* Resume Download Button */}
+      <motion.div
+        className="flex justify-center mb-8"
+        initial={{ opacity: 0, y: 100 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{
+          delay: 0.05,
+        }}
+      >
+        <a
+          className="group bg-white text-gray-900 px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 active:scale-105 transition-all border-2 border-white border-opacity-40 hover:bg-gray-50 font-medium shadow-lg"
+          href="/sazzad's_resume.pdf"
+          download
+          aria-label="Download resume"
+        >
+          Download Resume{" "}
+          <HiDownload className="opacity-70 group-hover:opacity-100 transition-opacity group-hover:translate-y-1" />
+        </a>
+      </motion.div>
 
       {/* Social Links */}
       <motion.div
