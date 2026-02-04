@@ -10,9 +10,15 @@ export default function Projects() {
   const { ref } = useSectionInView("Projects", 0.10);
 
   return (
-    <section ref={ref} id="projects" className="scroll-mt-28 mb-28">
-      <SectionHeading>My projects</SectionHeading>
-      <div>
+    <section 
+      ref={ref} 
+      id="projects" 
+      className="scroll-mt-28 mb-12 px-4"
+      aria-label="Portfolio projects"
+    >
+      <SectionHeading>My Projects</SectionHeading>
+      
+      <div className="max-w-3xl lg:max-w-4xl xl:max-w-5xl  mx-auto">
         {projectsData.map((project, index) => (
           <React.Fragment key={index}>
             <Project {...project} />

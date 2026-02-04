@@ -5,8 +5,8 @@ import SectionHeading from "./section-heading";
 import { skillsData } from "@/lib/data";
 import { useSectionInView } from "@/lib/hooks";
 import { motion } from "framer-motion";
-import { Icon } from "@iconify/react"; // Import Iconify for icon rendering
-import Image from "next/image"; // Import Image component for local images
+import { Icon } from "@iconify/react";
+import Image from "next/image";
 
 const fadeInAnimationVariants = {
   initial: {
@@ -22,10 +22,6 @@ const fadeInAnimationVariants = {
   }),
 };
 
-const growOnHover = {
-  scale: 1.2,
-};
-
 export default function Skills() {
   const { ref } = useSectionInView("Skills");
 
@@ -33,33 +29,48 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 max-w-[58rem] scroll-mt-28 text-center sm:mb-40"
+      className="mb-12 max-w-3xl lg:max-w-4xl xl:max-w-5xl px-6 scroll-mt-28 text-center sm:mb-12 "
+      aria-label="Technical skills"
     >
       <SectionHeading>My Skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="flex flex-col items-center px-4 py-3 dark:text-white/80"
+            className="flex flex-col items-center justify-center p-4 bg-white dark:bg-white/10 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 transition-colors shadow-sm hover:shadow-md border border-gray-100 dark:border-white/10"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
             whileInView="animate"
-            whileHover={growOnHover}
+            whileHover={{ scale: 1.1 }}
             viewport={{
               once: true,
             }}
             custom={index}
           >
-            {/* Ensure skill is defined before accessing its properties */}
-            {skill?.icon?.startsWith("/") ? (
-              // If it's a path to an image (local image)
-              <Image src={skill.icon} alt={skill.name} width={80} height={80} />
-            ) : // If it's an Iconify icon
-            skill?.icon ? (
-              <Icon icon={skill.icon} className="text-5xl md:text-7xl" />
-            ) : null // Return nothing if icon is undefined
-            }
-            <span className="mt-2">{skill?.name}</span>
+            {/* Skill Icon */}
+            <div className="mb-3 flex items-center justify-center h-16 w-16">
+              {skill?.icon?.startsWith("/") ? (
+                <Image
+                  src={skill.icon}
+                  alt={`${skill.name} logo`}
+                  width={64}
+                  height={64}
+                  className="object-contain"
+                />
+              ) : skill?.icon ? (
+                <Icon 
+                  icon={skill.icon} 
+                  className="text-5xl" 
+                  aria-hidden="true"
+                />
+              ) : null}
+            </div>
+            
+            {/* Skill Name */}
+            <span className="text-sm font-medium text-gray-900 dark:text-white text-center">
+              {skill?.name}
+            </span>
           </motion.li>
         ))}
       </ul>

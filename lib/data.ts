@@ -35,6 +35,21 @@ export const links = [
 
 export const experiencesData = [
   {
+    title: "AI Engineer",
+    location: "JB Connect Ltd. - Banani, Dhaka-BD",
+    description: `Responsibilities:
+                  1. Built and deployed an AI Assistant for a manufacturing firm specializing in laser and optical systems, automating key workflows and reducing manual operations by 65%.
+                  2. Developed and optimized ETL pipelines for ingesting, cleaning, and transforming heterogeneous Japanese-language datasets for downstream AI model training and evaluation.
+                  3. Designed and optimized multi-agent AI systems enabling coordinated and autonomous task execution.
+                  4. Enhanced Retrieval-Augmented Generation (RAG) architecture for improved contextual retrieval and grounded responses.
+                  5. Applied advanced context engineering techniques to structure prompts and retrieval context, increasing LLM accuracy and response relevance.
+                  6. Contributed to end-to-end AI solution deployment, ensuring production-grade performance, scalability, and reliability.
+                  7. Collaborated with cross-functional teams to identify automation opportunities and integrate AI systems into real-world industrial workflows.
+                  8. Optimized AI pipelines and system performance for efficiency in data processing and inference workloads.`,
+    icon: React.createElement(CgWorkAlt),
+    date: "May 2025 - Present",
+  },
+  {
     title: "Machine Learning Engineer",
     location: "Devolved AI - Uttara, Dhaka-BD",
     description: `Responsibilities:
