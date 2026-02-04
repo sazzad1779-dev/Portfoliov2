@@ -80,7 +80,7 @@ export const projectsData = [
       "logos:llm",
     ],
     imageUrl: AgentSyncImg,
-    githubLink: "https://github.com/sazzad1779/AgentSync",
+    githubLink: "https://github.com/sazzad1779-dev/AgentSync",
     // demoLink: "https://www.youtube.com/watch?v=uhyC0M4WIl4",
   },
   {
@@ -93,7 +93,7 @@ export const projectsData = [
       "logos:python",
     ],
     imageUrl: FattahArcImg,
-    githubLink: "https://github.com/sazzad1779/Fattah_SLM",
+    githubLink: "https://github.com/sazzad1779-dev/Fattah_SLM",
   },
   {
     title: "Speech-to-Speech Chatbot",
@@ -106,7 +106,7 @@ export const projectsData = [
       "/icons/flask.png",
     ],
     imageUrl: speechtospeech_archImg,
-    githubLink: "https://github.com/sazzad1779/SpeechToSpeechChatBot",
+    githubLink: "https://github.com/sazzad1779-dev/SpeechToSpeechChatBot",
   },
   {
     title: "Background Remover Module Using U2Net.",
@@ -118,7 +118,7 @@ export const projectsData = [
       "logos:python",
     ],
     imageUrl: backgroundRemvImg,
-    githubLink: "https://github.com/sazzad1779/Background_remover_using_u2net_",
+    githubLink: "https://github.com/sazzad1779-dev/Background_remover_using_u2net_",
   },
 ] as const;
 

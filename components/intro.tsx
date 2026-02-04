@@ -78,7 +78,7 @@ export default function Intro() {
       >
         <a
           className="group bg-gray-950 text-white px-5 py-2 flex items-center gap-2 rounded-full outline-none focus:scale-105 hover:scale-105 active:scale-105 transition border-2 border-white border-opacity-40"
-          href="https://github.com/sazzad1779"
+          href="https://github.com/sazzad1779-dev"
           target="_blank"
         >
           GitHub <FaGithub className="opacity-70" />
