@@ -63,7 +63,7 @@ export const experiencesData = [
                   8. Ensure AI solutions are scalable, reliable, and optimized for efficiency.
                   9. Partner with cross-functional teams to identify, define, and prioritize AI-driven requirements and opportunities.`,
     icon: React.createElement(CgWorkAlt),
-    date: "March 2024 - Current",
+    date: "March 2024 - April 2025",
   },
   {
     title: "Software Engineer",
@@ -78,7 +78,7 @@ export const experiencesData = [
                   7. Developed a multi-camera security surveillance system for real-time tracking of human and vehicle movements, enhancing security and operational efficiency.
                   8. Designed a RISC-V vector extension compiler in C, optimizing performance and extending functionality for RISC-V architecture in embedded systems.` , 
     icon: React.createElement(CgWorkAlt),
-    date: "January 2022 - February 2024",
+    date: "September 2021 - February 2024",
   },
  
 ] as const;
@@ -167,12 +167,8 @@ export const skillsData = [
     icon: "/icons/langchain_logo.png",
   },
   {
-    name: "DeepEval",
-    icon: "/icons/deepeval.png",
-  },
-  {
-    name: "Uptrain",
-    icon: "/icons/uptrain.jpeg",
+    name: "aws",
+    icon: "/icons/aws.webp",
   },
   {
     name: "Git",
@@ -199,23 +195,27 @@ export const skillsData = [
     icon: "/icons/kafka.png",
   },
   {
-    name: "Pandas",
-    icon: "logos:pandas-icon",
+    name: "Weaviate",
+    icon: "/icons/weaviate-logo-w.webp",
   },
   {
-    name: "Dask",
-    icon: "/icons/dask_icon.webp",
-  },
-  {
-    name: "SciPy",
-    icon: "/icons/scipy.png",
+    name: "Docling",
+    icon: "/icons/docling.webp",
   },
   {
     name: "Chroma DB",
     icon: "/icons/chroma-seeklogo.png",
   },
   {
-    name: "MySQL",
-    icon: "logos:mysql",
+    name: "PostgresSQL",
+    icon: "/icons/postgres.webp",
+  },
+  {
+    name: "DeepEval",
+    icon: "/icons/deepeval.png",
+  },
+  {
+    name: "Uptrain",
+    icon: "/icons/uptrain.jpeg",
   },
 ] as const;

@@ -13,7 +13,7 @@ export default function Projects() {
     <section 
       ref={ref} 
       id="projects" 
-      className="scroll-mt-28 mb-12 px-4"
+      className="scroll-mt-28 mb-8 px-4"
       aria-label="Portfolio projects"
     >
       <SectionHeading>My Projects</SectionHeading>

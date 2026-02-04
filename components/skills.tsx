@@ -29,15 +29,15 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-12 max-w-3xl lg:max-w-4xl xl:max-w-5xl px-6 scroll-mt-28 text-center sm:mb-12 "
+      className="mb-8 sm:mb-12 mt-12 scroll-mt-8 w-full max-w-3xl lg:max-w-4xl xl:max-w-5xl px-6 mx-auto"
       aria-label="Technical skills"
     >
-      <SectionHeading>My Skills</SectionHeading>
+      <SectionHeading>Technical skills</SectionHeading>
       
-      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 text-lg text-gray-800">
+      <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 xl:grid-cols-7 gap-4 text-lg text-gray-800">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="flex flex-col items-center justify-center p-4 bg-white dark:bg-white/10 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 transition-colors shadow-sm hover:shadow-md border border-gray-100 dark:border-white/10"
+            className="flex flex-col items-center justify-center p-2 bg-white dark:bg-white/10 rounded-lg hover:bg-gray-50 dark:hover:bg-white/20 transition-colors shadow-sm hover:shadow-md border border-gray-100 dark:border-white/10"
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -49,13 +49,13 @@ export default function Skills() {
             custom={index}
           >
             {/* Skill Icon */}
-            <div className="mb-3 flex items-center justify-center h-16 w-16">
+            <div className="mb-1 flex items-center justify-center h-12 w-12">
               {skill?.icon?.startsWith("/") ? (
                 <Image
                   src={skill.icon}
                   alt={`${skill.name} logo`}
-                  width={64}
-                  height={64}
+                  width={40}
+                  height={40}
                   className="object-contain"
                 />
               ) : skill?.icon ? (

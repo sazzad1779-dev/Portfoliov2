@@ -4,13 +4,14 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 import ThemeSwitch from "@/components/theme-switch";
 import ThemeContextProvider from "@/context/theme-context";
 import { Toaster } from "react-hot-toast";
+import Chatbot from "@/components/chatbot";
 import "./globals.css";
 
 const nunito = Nunito({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Md Sazzad Hossain | Machine Learning Engineer",
-  description: "Machine Learning Engineer at Devolved AI.",
+  title: "Md Sazzad Hossain | AI Engineer",
+  description: "AI Engineer Portfolio of Md Sazzad Hossain",
 };
 
 export default function RootLayout({
@@ -30,6 +31,7 @@ export default function RootLayout({
 
             <Toaster position="top-right" />
             <ThemeSwitch />
+            <Chatbot />
           </ActiveSectionContextProvider>
         </ThemeContextProvider>
       </body>
